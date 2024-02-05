@@ -194,6 +194,34 @@
                 </ul>
             </div>
         </div>
+        <div id="shareB">
+            
+            <a class="facebook" target="blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a class="twitter" target="blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a class="linkedin" target="blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a class="whatsapp" target="blank"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            
+        </div>
+        <script>
+                
+                const link = 'https://jak-shaon.github.io/resume/';
+                const msg = encodeURIComponent('Check it out.');
+                const title = encodeURIComponent(document.querySelector('title').textContent);
+                console.log([link,msg,title]);
+                
+                const fb = document.querySelector('.facebook');
+                fb.href = `https://www.facebook.com/share.php?u=${link}`;
+                
+                const twitter = document.querySelector('.twitter');
+                twitter.href = `http://twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming`;
+                
+                const linkedIn = document.querySelector('.linkedin');
+                linkedIn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${link}`;
+                
+                const whatsapp = document.querySelector('.whatsapp');
+                whatsapp.href = `https://api.whatsapp.com/send?text=${msg}: ${link}`;
+            
+        </script>
     </div>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
